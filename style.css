@@ -6,36 +6,33 @@
 }
 
 html {
-    scroll-behavior: smooth; /* Enables smooth scrolling */
+    scroll-behavior: smooth;
 }
 
-/* Ensure the body doesn't allow horizontal scrolling */
 body {
     font-family: Arial, sans-serif;
     color: #ffffff;
     background-color: #161616;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
 }
 
 /* About Me Section - Full Width and Centered */
-/* Full-Width About Me Section - Centered */
 #about-me-section {
-    width: 100vw; /* Full viewport width */
-    max-width: 100vw; /* Ensure no extra space on the right */
+    width: 100vw;
+    max-width: 100vw;
     height: auto;
-    margin: 0; /* Remove any default margin */
-    padding: 0; /* Remove padding */
+    margin: 0;
+    padding: 0;
     position: relative;
-    background-color: #161616; /* Background color */
+    background-color: #161616;
     display: flex;
-    justify-content: center; /* Center content if needed */
-    align-items: center; /* Center vertically if needed */
+    justify-content: center;
+    align-items: center;
 }
 
-/* Optional styling for the image inside the about-me-section */
 .about-me-image {
-    width: 100%; /* Make the image span the full section width */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    height: auto;
 }
 
 /* Header styling */
@@ -78,7 +75,6 @@ body {
     z-index: 1;
 }
 
-/* Hover Effect */
 .header nav ul li a::before {
     content: "";
     position: absolute;
@@ -86,7 +82,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 1); /* Pure white background */
+    background-color: rgba(255, 255, 255, 1);
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.3s ease;
@@ -103,140 +99,10 @@ body {
     border-color: rgba(255, 255, 255, 0.6);
 }
 
-
-/* Active link styling */
 .header nav ul li a.active {
     color: #fa0404;
     background-color: rgb(255, 255, 255);
     border-color: rgba(255, 255, 255, 0.3);
-}
-
-/* Project Cards Layout with Glow Effect */
-/* Project Cards Layout with Background Image */
-.project-cards {
-    position: relative; /* Required for the pseudo-element positioning */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
-}
-
-.project-cards::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%; /* Cover the full width of the project cards section */
-    height: 100%; /* Cover the full height of the project cards section */
-    background-image: url('/vamp\ bg 2.gif'); /* Replace with the path to your image */
-    background-size: cover; /* Ensures the image covers the area */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    opacity: 0.2; /* Optional: Adjust for subtlety if needed */
-    z-index: -1; /* Places the image behind the project cards */
-}
-
-
-/* Project Card with Updated Structure */
-/* Project Card with Title on Top */
-.project-card {
-    display: flex;
-    flex-direction: column; /* Stack title, image, and info vertically */
-    width: 600px;
-    height: auto;
-    background-color: #1c1c1e;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-    color: #ffffff;
-    text-decoration: none;
-}
-.project-card:hover {
-    transform: scale(1.05); /* Slightly enlarge the card */
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Add a deeper shadow */
-}
-
-.project-title-container {
-    padding: 1rem; /* Adds padding around the title */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1c1c1e; /* Match card background or adjust as needed */
-}
-
-.project-title {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.project-image-container {
-    width: 100%; /* Full width of the card */
-    height: 250px; /* Adjust height as needed */
-    overflow: hidden;
-}
-
-.project-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.project-info {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-
-/* Tags Styling */
-.project-tags {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    margin-bottom: 0.5rem;
-}
-
-.tag {
-    background-color: #444;
-    color: #ccc;
-    font-size: 12px;
-    padding: 4px 8px;
-    border-radius: 5px;
-}
-
-/* Project Description */
-.project-description {
-    font-size: 14px;
-    color: #b5b5b5;
-    margin: 0.5rem 0;
-}
-
-/* Project Title and Link */
-.project-title-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-.project-title {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.external-link {
-    font-size: 18px;
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.external-link:hover {
-    color: #ff5e57;
 }
 
 /* Full-Screen Image and Overlay Text Styling */
@@ -255,7 +121,6 @@ body {
     display: block;
 }
 
-/* Centered Intro Text Overlay */
 .intro-text {
     position: absolute;
     top: 120px;
@@ -301,11 +166,130 @@ body {
     margin: 0 auto;
 }
 
-/* Skills Section */
+/* Project Cards Layout with Background Image */
+.project-cards {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.project-cards::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-image: url('/vamp\ bg 2.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: auto;
+    background-color: #1c1c1e;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.project-title-container {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1c1c1e;
+}
+
+.project-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.project-image-container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+}
+
+.tag {
+    background-color: #444;
+    color: #ccc;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+
+.project-description {
+    font-size: 14px;
+    color: #b5b5b5;
+    margin: 0.5rem 0;
+}
+
+.project-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.external-link {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.external-link:hover {
+    color: #ff5e57;
+}
+
 .skills-section {
     padding: 2rem 0;
     text-align: center;
-    background-color: #161616; /* Updated background color */
+    background-color: #161616;
 }
 
 .skills-section ul {
@@ -320,13 +304,12 @@ body {
     color: #ffffff;
 }
 
-/* Endless Scroll Animation */
 .scrolling-images {
     overflow: hidden;
     position: relative;
     width: 100%;
     margin-top: 2rem;
-    background-color: #161616; /* Updated background color */
+    background-color: #161616;
 }
 
 .scroll-container {
@@ -355,7 +338,6 @@ body {
     }
 }
 
-/* Footer Styling */
 .footer {
     text-align: center;
     padding: 1rem;
@@ -371,7 +353,6 @@ body {
     color: #ffffff;
 }
 
-/* Projects Heading Styling */
 .projects-heading {
     font-size: 56px;
     font-weight: bold;
@@ -381,7 +362,7 @@ body {
     margin-bottom: 20px;
     color: #ffffff;
 }
-/* Contact Section Styling */
+
 .contact-section {
     padding: 1rem;
     background-color: #161616;
@@ -389,23 +370,21 @@ body {
     position: relative;
 }
 
-/* Contact Heading Positioned Similarly to Projects Heading */
 .contact-heading {
     font-size: 56px;
     font-weight: bold;
     color: #ffffff;
     margin-top: 40px;
     margin-bottom: 20px;
-    margin-left: 13%; /* Aligns 13% from the left, like Projects */
+    margin-left: 13%;
 }
 
-/* Contact Info Styling */
 .contact-info {
     font-size: 18px;
     color: #ffffff;
     margin-top: 10px;
     line-height: 1.6;
-    padding-left: 13%; /* Aligns contact info with the heading position */
+    padding-left: 13%;
 }
 
 .contact-info a {
@@ -419,66 +398,131 @@ body {
     margin-top: 10px;
     line-height: 1.6;
     padding-left: 0%;
-    margin-bottom: 10px; /* Aligns contact info with the heading position */
+    margin-bottom: 10px;
 }
+
 .contact-info a:hover {
     text-decoration: underline;
 }
-/* Contact Section Styling */
+
 .contact-section {
-    padding: auto; /* Remove padding for full-width image */
-    background-image: url('/vamp\ bg\ 2.gif'); /* Replace with your image path */
-    background-size: cover; /* Ensures the image covers the entire section */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevents repeating */
-    color: #ffffff; /* Ensures text color is readable on the image */
+    padding: auto;
+    background-image: url('/vamp\ bg\ 2.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
     position: relative;
     text-align: left;
     margin-top: 20px;
     margin-bottom: 20px;
 }
-/* About Me Section - Full Width and Centered */
-#about-me-section {
-    position: relative; /* Ensures the button is positioned relative to this section */
-    width: 100vw;
-    max-width: 100vw;
-    height: auto;
-    margin: 0;
-    padding: 0;
-    background-color: #161616;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-/* Download Resume Button Styling - Bottom Center */
 .download-resume-button {
     position: absolute;
-    bottom: 50px; /* Position from the bottom */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Center-aligns the button */
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
     padding: 0.8rem 1.2rem;
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
-    color: #161616; /* Dark text color for contrast */
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #161616;
     font-size: 14px;
     font-weight: bold;
     border: none;
     border-radius: 15px;
     text-decoration: none;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
-.download-resume-button:hover {
-    background-color: rgba(255, 255, 255, 1); /* Full white on hover */
-    color: #E32000; /* Change text color to red on hover */
-    transform: translateX(-50%) scale(1.05); /* Centered scale-up on hover */
-}
+.download
+/* General reset and styling remains the same */
 
-.render {
-    font-size: 12px;
-    color: #b2b0b0;
-    margin-top: 20px;
-    line-height: 1.6;
-    padding-left: 0%; /* Aligns contact info with the heading position */
+/* --- Media Query for Mobile View --- */
+@media (max-width: 768px) {
+
+    /* Header: Mobile Menu (Collapsible) */
+    .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 0.5rem;
+        background-color: rgba(255, 255, 255, 0.05);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    /* Hide the default nav menu and display a menu icon */
+    .header nav ul {
+        display: none; /* Hide navigation links by default */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #161616;
+    }
+
+    /* Mobile Menu Icon */
+    .menu-icon {
+        cursor: pointer;
+        font-size: 24px;
+        color: #ffffff;
+    }
+
+    /* Show nav menu when active */
+    .header.active nav ul {
+        display: flex; /* Show the menu when activated */
+    }
+
+    /* Portfolio Image and Overlay Text */
+    .image-container {
+        height: 400px; /* Reduce height for mobile */
+    }
+
+    .portfolio-image {
+        height: 100%; /* Adjust to fit the smaller container */
+        width: auto; /* Maintain aspect ratio */
+    }
+
+    /* Reduce overlay text size */
+    .intro-text {
+        top: 80px; /* Adjust position */
+        font-size: 10px;
+    }
+
+    .text-overlay h1 {
+        font-size: 36px; /* Smaller heading for mobile */
+    }
+
+    .text-overlay .subheading {
+        font-size: 16px; /* Smaller subheading for mobile */
+    }
+
+    /* Download Resume Button */
+    .download-resume-button {
+        padding: 0.5rem 1rem; /* Smaller padding */
+        font-size: 12px; /* Smaller font size */
+        bottom: 20px; /* Adjust position */
+    }
+
+    /* Project Cards */
+    .project-card {
+        width: 100%; /* Full width on mobile */
+        max-width: 100%;
+        padding: 1rem; /* Padding around cards */
+    }
+
+    /* Contact Info Alignment */
+    .contact-info {
+        padding-left: 5%; /* Smaller padding for alignment */
+        font-size: 16px;
+    }
+
+    .contact-heading {
+        font-size: 36px; /* Smaller heading for mobile */
+        margin-left: 5%;
+    }
 }
