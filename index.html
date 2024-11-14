@@ -9,7 +9,7 @@
         /* Active link styling */
         .header nav ul li a.active {
             color: #ff5e57;
-            background-color: rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 255, 255);
             border-color: rgba(255, 255, 255, 0.3);
             border-radius: 20px;
             font-weight: bold;
@@ -30,7 +30,7 @@
                 display: block;
             }
 
-            /* Hide navigation links by default on mobile, with background blur and fade animation */
+            /* Smooth animation for menu opening/closing */
             .header nav ul {
                 display: none;
                 flex-direction: column;
@@ -39,12 +39,12 @@
                 top: 100%;
                 left: 0;
                 width: 100%;
-                background-color: rgba(22, 22, 22, 0.9);
+                background-color: rgba(22, 22, 22);
                 backdrop-filter: blur(10px);
                 padding: 0;
                 opacity: 0;
                 transform: translateY(-20px);
-                transition: opacity 0.3s ease, transform 0.3s ease;
+                transition: opacity 0.4s ease, transform 0.4s ease;
             }
 
             /* Show navigation with animation when active */
@@ -62,17 +62,13 @@
                 border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             }
 
-            /* Smaller overlay text for mobile */
-            .intro-text {
-                font-size: 8px;
-            }
-
+            /* Slightly increased size for .text-overlay section in mobile view */
             .text-overlay h1 {
-                font-size: 24px; /* Smaller heading size for mobile */
+                font-size: 28px; /* Adjusted main heading font size */
             }
 
             .text-overlay .subheading {
-                font-size: 12px; /* Smaller subheading for mobile */
+                font-size: 16px; /* Adjusted subheading font size */
             }
 
             /* Smaller heading sizes for projects and contact in mobile view */
@@ -88,7 +84,10 @@
             .download-resume-button {
                 padding: 0.5rem 1rem;
                 font-size: 12px;
-                bottom: 20px;
+                position: absolute;
+                bottom: 10px; /* Position closer to the bottom */
+                left: 50%;
+                transform: translateX(-50%);
             }
 
             /* Contact Info adjustments */
@@ -148,6 +147,7 @@
             <h2>Product Management, Design, UI/UX, Analysis & more.</h2>
         </div>
 
+        <!-- Adjusted size for .text-overlay section on mobile -->
         <div class="text-overlay">
             <h1>Veerendra <span class="highlight">Varun's</span></h1>
             <h1 class="subheading">Portfolio</h1>
@@ -341,6 +341,7 @@
 
     </div>
 </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <h1 class="contact-heading">Contact.</h1>
@@ -361,7 +362,8 @@
     <!-- JavaScript for Collapsible Menu and Scroll Detection -->
     <script>
         function toggleMenu() {
-            document.querySelector('.header').classList.toggle('active');
+            const header = document.querySelector('.header');
+            header.classList.toggle('active');
         }
 
         function closeMenu() {
