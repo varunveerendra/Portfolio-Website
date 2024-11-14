@@ -103,6 +103,7 @@ body {
     border-color: rgba(255, 255, 255, 0.6);
 }
 
+
 /* Active link styling */
 .header nav ul li a.active {
     color: #fa0404;
