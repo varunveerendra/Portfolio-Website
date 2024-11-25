@@ -35,11 +35,77 @@ body {
     height: auto;
 }
 
+/* Updated Header Styling */
+.header {
+    position: sticky;
+    top: 10px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 0 rem 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px; /* Rounded navbar */
+}
+/* Navigation Menu */
+.header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem; /* Adjust spacing between items */
+    margin: 0;
+    border-radius: 0 0 20px 20px;
+    align-items: center;
+    padding: 0;
+}
+
+.header nav ul li {
+    margin: 0;
+}
+
+.header nav ul li a {
+    color: #8e8e8e;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.header nav ul li a:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Call-to-Action Button */
+.header .cta-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1.2rem;
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #1e90ff;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.header .cta-button:hover {
+    background-color: #0077ff;
+    transform: scale(1.05);
+}
+
 /* Header styling */
 .header {
     position: sticky;
-    top: 0;
-    width: 100%;
+    top: 30px;
+    margin: 0 auto;
+    width: 80%;
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     z-index: 1000;
@@ -48,7 +114,34 @@ body {
     justify-content: center;
     align-items: center;
 }
+/* Avatar styles */
+.avatar-cta {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Removes underline if it's a link */
+}
 
+.avatar {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Menu button styles */
+.menu-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    .header {
+        width: 95%; /* Wider width for mobile screens */
+    }
+}
 .header nav ul {
     list-style: none;
     display: flex;
@@ -333,6 +426,7 @@ body {
     width: auto;
     height: 75px;
 }
+
 
 @keyframes scroll {
     0% {
