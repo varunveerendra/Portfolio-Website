@@ -329,6 +329,11 @@ body {
     height: 85px;
 }
 
+.scroll-container img[alt="Tool 3"] {
+    width: auto;
+    height: 75px;
+}
+
 @keyframes scroll {
     0% {
         transform: translateX(0);
